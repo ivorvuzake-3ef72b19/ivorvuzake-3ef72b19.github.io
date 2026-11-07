@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mrds.fun-每日短剧在线看_微短剧推荐更新与追剧指南</title>
+<meta name="description" content="mrds.fun专注每日短剧内容聚合，提供微短剧在线观看入口、热播短剧推荐、最新更新追踪与追剧指南，涵盖都市逆袭、甜宠、悬疑、古装等热门类型，帮助剧迷快速找到高爽点短剧与更新时间。">
+<meta name="keywords" content="mrds.fun,每日短剧,微短剧推荐,短剧在线看,短剧更新">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111a2b'/%3E%3Cpath d='M20 24h24v4H20zm0 8h24v4H20zm0 8h16v4H20z' fill='%23ff5a5f'/%3E%3Ccircle cx='46' cy='46' r='6' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#141a24;
+  --ink-2:#3d4757;
+  --muted:#7b8797;
+  --line:#e6e9ef;
+  --bg:#f5f7fa;
+  --card:#ffffff;
+  --brand:#ff4d57;
+  --brand-2:#ff8a3d;
+  --accent:#1f6feb;
+  --gold:#f0a500;
+  --radius:16px;
+  --shadow:0 6px 22px rgba(21,32,52,.07);
+  --shadow-hover:0 14px 34px rgba(21,32,52,.14);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.sec{padding:52px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.sec-head h2{font-size:26px;letter-spacing:.5px;position:relative;padding-left:14px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:4px;background:linear-gradient(180deg,var(--brand),var(--brand-2))}
+.sec-head .more{color:var(--muted);font-size:14px}
+.sec-head .more:hover{color:var(--brand)}
+
+/* 导航 */
+.topnav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;gap:22px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;letter-spacing:.4px;white-space:nowrap}
+.logo .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-size:15px;font-weight:900}
+.nav-links{display:flex;gap:20px;font-size:15px;color:var(--ink-2);overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{padding:6px 0;white-space:nowrap;border-bottom:2px solid transparent}
+.nav-links a:hover{color:var(--brand);border-color:var(--brand)}
+.nav-cta{margin-left:auto;display:flex;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 18px;border-radius:999px;font-size:14px;font-weight:600;transition:.25s;border:1px solid transparent;cursor:pointer}
+.btn-main{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 6px 16px rgba(255,77,87,.28)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,77,87,.36)}
+.btn-ghost{border-color:var(--line);color:var(--ink-2);background:#fff}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+
+/* Banner */
+.banner{padding:46px 0 40px;background:linear-gradient(160deg,#101a2e 0%,#1c2b48 46%,#2a1c33 100%);color:#fff;position:relative;overflow:hidden}
+.banner::after{content:"";position:absolute;right:-140px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,77,87,.35),transparent 66%)}
+.banner::before{content:"";position:absolute;left:-120px;bottom:-160px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(31,111,235,.32),transparent 68%)}
+.banner .wrap{position:relative;z-index:2}
+.banner .tag-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.banner .tag-row span{font-size:13px;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:#e6edf8}
+.banner h1{font-size:38px;line-height:1.3;letter-spacing:.6px;max-width:820px}
+.banner h1 em{font-style:normal;color:#ffb03a}
+.banner p.lead{margin-top:14px;color:#c7d2e3;max-width:760px;font-size:16px}
+.searchbar{margin-top:26px;display:flex;gap:10px;max-width:640px;background:#fff;border-radius:999px;padding:6px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.searchbar input{flex:1;border:0;outline:0;padding:10px 16px;font-size:15px;border-radius:999px;color:var(--ink);background:transparent}
+.searchbar button{border:0;border-radius:999px;padding:10px 26px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;font-size:15px;cursor:pointer}
+.banner-btns{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
+.banner-btns a{font-size:14px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);color:#e9effa;transition:.22s}
+.banner-btns a:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.banner-stats{margin-top:28px;display:flex;gap:34px;flex-wrap:wrap;color:#9fb0c8;font-size:14px}
+.banner-stats strong{color:#fff;font-size:20px;display:block;line-height:1.2}
+
+/* 简介 */
+.intro-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:26px;align-items:start}
+.intro-text p{margin-bottom:14px;color:var(--ink-2);font-size:15.5px}
+.intro-text p strong{color:var(--ink)}
+.intro-side{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 22px 8px}
+.intro-side h3{font-size:17px;margin-bottom:12px}
+.intro-side ul{list-style:none}
+.intro-side li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px;color:var(--ink-2);display:flex;justify-content:space-between;gap:10px}
+.intro-side li:last-child{border-bottom:0}
+.intro-side li b{color:var(--brand)}
+
+/* 卡片网格 */
+.grid-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.dcard{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.dcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+.dcard .cover{height:118px;position:relative;display:flex;align-items:flex-end;padding:10px 12px;color:#fff;font-weight:700;font-size:13px}
+.dcard .cover span{background:rgba(0,0,0,.35);padding:3px 10px;border-radius:999px;backdrop-filter:blur(4px)}
+.dcard .body{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.dcard h3{font-size:16px;line-height:1.45;margin-bottom:8px}
+.dcard h3:hover{color:var(--brand)}
+.dcard .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+.dcard .tags i{font-style:normal;font-size:12px;padding:2px 8px;border-radius:6px;background:#f0f3f9;color:#5a6779}
+.dcard p{font-size:13.5px;color:var(--muted);flex:1}
+.dcard .meta{margin-top:11px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--muted)}
+.dcard .meta b{color:var(--brand);font-size:13px}
+.c1{background:linear-gradient(135deg,#ff6b6b,#c0392b)}
+.c2{background:linear-gradient(135deg,#5f7cff,#2a3ba0)}
+.c3{background:linear-gradient(135deg,#ffb347,#e07b00)}
+.c4{background:linear-gradient(135deg,#4ecdc4,#16796f)}
+.c5{background:linear-gradient(135deg,#b06ab3,#4a2a72)}
+.c6{background:linear-gradient(135deg,#ff8a8a,#b3295a)}
+.c7{background:linear-gradient(135deg,#43a6f5,#1a4f8f)}
+.c8{background:linear-gradient(135deg,#f7b733,#c26b00)}
+
+/* 更新列表 */
+.upd-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.upd{background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:15px 18px;display:flex;gap:14px;align-items:flex-start;transition:.2s}
+.upd:hover{transform:translateX(4px);box-shadow:var(--shadow-hover)}
+.upd .dot{flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:var(--brand);margin-top:9px}
+.upd .txt{flex:1}
+.upd .txt h4{font-size:15.5px;margin-bottom:4px}
+.upd .txt p{font-size:13.5px;color:var(--muted)}
+.upd time{font-size:12.5px;color:#98a3b3;white-space:nowrap}
+
+/* 分类 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{background:var(--card);border-radius:14px;padding:20px 18px;box-shadow:var(--shadow);transition:.24s;border:1px solid transparent}
+.cat:hover{transform:translateY(-4px);border-color:#ffd0d3;box-shadow:var(--shadow-hover)}
+.cat .ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:18px;margin-bottom:12px;background:#fff1f2;color:var(--brand)}
+.cat h3{font-size:16px;margin-bottom:6px}
+.cat p{font-size:13.5px;color:var(--muted)}
+
+/* 深度解析 */
+.deep{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px 40px}
+.deep h2{font-size:26px;margin-bottom:20px;padding-left:14px;position:relative}
+.deep h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:4px;background:linear-gradient(180deg,var(--brand),var(--brand-2))}
+.deep h3{font-size:18.5px;margin:26px 0 10px;color:var(--ink)}
+.deep p{color:var(--ink-2);font-size:15.5px;margin-bottom:13px}
+.deep p strong{color:var(--ink)}
+.deep blockquote{border-left:3px solid var(--brand);background:#fff7f7;padding:12px 18px;border-radius:0 10px 10px 0;color:#6a4b4b;font-size:14.5px;margin:16px 0}
+
+/* 体验指南 */
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.exp{background:var(--card);border-radius:14px;padding:22px;box-shadow:var(--shadow);transition:.24s}
+.exp:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.exp .num{font-size:26px;font-weight:900;color:#ffd6d9;line-height:1;margin-bottom:10px}
+.exp h3{font-size:16px;margin-bottom:8px}
+.exp p{font-size:14px;color:var(--muted)}
+
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.faq-item{background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:18px 20px}
+.faq-item h3{font-size:15.5px;margin-bottom:8px;color:var(--ink);display:flex;gap:8px}
+.faq-item h3::before{content:"Q";flex:0 0 22px;width:22px;height:22px;border-radius:7px;background:#fff1f2;color:var(--brand);font-size:12px;font-weight:800;display:grid;place-items:center}
+.faq-item p{font-size:14px;color:var(--ink-2)}
+
+/* 评论 */
+.cmt-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.cmt{background:var(--card);border-radius:12px;box-shadow:var(--shadow);padding:16px 18px}
+.cmt-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:14px;font-weight:700;flex:0 0 34px}
+.cmt-top .name{font-size:14px;font-weight:600}
+.cmt-top time{font-size:12px;color:#98a3b3;margin-left:auto}
+.cmt p{font-size:14px;color:var(--ink-2)}
+.cmt .like{margin-top:8px;font-size:12.5px;color:var(--muted)}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.news{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:20px;transition:.24s}
+.news:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.news .date{font-size:12.5px;color:var(--brand);font-weight:600;margin-bottom:8px}
+.news h3{font-size:15.5px;line-height:1.5;margin-bottom:8px}
+.news p{font-size:13.5px;color:var(--muted)}
+
+/* 订阅 */
+.subscribe{background:linear-gradient(135deg,#101a2e,#2a1c33);border-radius:20px;padding:38px 40px;color:#fff;display:flex;gap:26px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.subscribe h2{font-size:24px;margin-bottom:8px}
+.subscribe p{color:#b8c5d9;font-size:14.5px}
+.subscribe .box{display:flex;gap:10px;background:rgba(255,255,255,.1);padding:6px;border-radius:999px;border:1px solid rgba(255,255,255,.16)}
+.subscribe .box input{border:0;background:transparent;outline:0;color:#fff;padding:9px 16px;font-size:14px;min-width:200px}
+.subscribe .box input::placeholder{color:#8f9fb5}
+.subscribe .box button{border:0;border-radius:999px;padding:9px 22px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-weight:700;cursor:pointer;font-size:14px}
+
+/* 页脚 */
+.footer{background:#0f1626;color:#9aa8bd;padding:48px 0 26px;margin-top:20px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px}
+.foot-grid h4{color:#fff;font-size:15px;margin-bottom:14px}
+.foot-grid a{display:block;font-size:13.5px;padding:4px 0;color:#9aa8bd}
+.foot-grid a:hover{color:#ffb03a}
+.foot-brand p{font-size:13.5px;line-height:1.8;margin-top:10px;color:#8392a8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:32px;padding-top:20px;font-size:12.5px;color:#6d7c93;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media(max-width:1000px){
+  .grid-cards{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .exp-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:repeat(2,1fr)}
+  .intro-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .banner h1{font-size:27px}
+  .banner{padding:34px 0 30px}
+  .sec{padding:36px 0}
+  .sec-head h2{font-size:21px}
+  .deep{padding:24px 20px}
+  .deep h2{font-size:21px}
+  .grid-cards,.upd-list,.faq-wrap,.cmt-list,.exp-grid,.news-grid,.cat-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .nav-cta .btn-ghost{display:none}
+  .subscribe{padding:26px 20px}
+  .subscribe .box{width:100%}
+  .subscribe .box input{min-width:0;flex:1}
+  .banner-stats{gap:20px}
+  .foot-grid{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<nav class="topnav">
+  <div class="nav-inner">
+    <a class="logo" href="/#home"><span class="mark">M</span>mrds.fun</a>
+    <div class="nav-links">
+      <a href="/#home">首页</a>
+      <a href="/#hot">热播推荐</a>
+      <a href="/#update">更新追踪</a>
+      <a href="/#cats">题材分类</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#news">短剧资讯</a>
+      <a href="/#cmt">剧迷评论</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="/#faq">新手帮助</a>
+      <a class="btn btn-main" href="/#update">今日更新</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Banner -->
+<header class="banner" id="home">
+  <div class="wrap">
+    <div class="tag-row">
+      <span>每日短剧聚合</span><span>都市逆袭</span><span>甜宠爽剧</span><span>悬疑反转</span><span>古装权谋</span>
+    </div>
+    <h1>mrds.fun 每日短剧在线看：<em>微短剧推荐</em>与更新追踪一站直达</h1>
+    <p class="lead">mrds.fun 把每天上新的短剧、微短剧整理成可快速浏览的清单，按题材、热度、更新时间分层呈现，让你不用来回翻小程序也能找到下一部想追的剧。</p>
+    <p class="lead">从三分钟一集的爽感节奏到百集长线剧情，这里既讲清楚每部剧的看点，也标注更新状态与适合人群，追剧和挑剧都更省时间。</p>
+    <form class="searchbar" onsubmit="return false">
+      <input type="text" placeholder="搜剧名、题材、主演，如：都市逆袭 / 甜宠 / 悬疑反转">
+      <button type="button">搜短剧</button>
+    </form>
+    <div class="banner-btns">
+      <a href="/#hot">热播榜单</a>
+      <a href="/#update">今日更新</a>
+      <a href="/#cats">题材分类</a>
+      <a href="/#deep">类型解析</a>
+      <a href="/#exp">追剧指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#news">短剧资讯</a>
+      <a href="/#cmt">剧迷评论</a>
+    </div>
+    <div class="banner-stats">
+      <div><strong>1200+</strong>收录短剧条目</div>
+      <div><strong>每日</strong>更新追踪</div>
+      <div><strong>18</strong>题材标签</div>
+      <div><strong>3</strong>分钟起追单元</div>
+    </div>
+  </div>
+</header>
+
+<!-- 内容简介 -->
+<section class="sec" id="intro">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>mrds.fun 是什么：一个面向短剧剧迷的内容聚合页</h2>
+      <span class="more">阅读约 2 分钟</span>
+    </div>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p><strong>mrds.fun</strong> 的核心定位很直接：把分散在各个小程序、短视频平台和信息流里的短剧内容，整理成一份可读、可比较、可追踪的清单。很多人搜索短剧时并不是缺内容，而是缺一个“先看什么、哪部更新到第几集、值不值得追”的判断依据。这个页面就是围绕这个需求搭建的。</p>
+        <p>页面里的短剧推荐按题材分成都市逆袭、甜宠言情、悬疑反转、古装权谋、家庭伦理、职场商战等方向，每一条都尽量给出类型标签、看点摘要与更新状态。对于习惯碎片时间看剧的用户，短剧一集通常只有几分钟，节奏快、钩子密，选错剧的沉没成本不高，但反复试错同样浪费时间，所以<strong>结构化推荐</strong>比单纯堆列表更有价值。</p>
+        <p>这个页面适合几类人：刚接触微短剧、想先了解类型格局的新观众；已经在追几部剧、需要集中查看更新节奏的老剧迷；以及想按心情挑剧、今天想看爽文逆袭明天想看悬疑反转的轻度用户。你可以在热播推荐里找口碑，在更新追踪里看进度，在深度解析里理解题材套路，再回到评论区和别人对一对观感。</p>
+        <p>值得收藏的原因是，短剧的更新节奏往往比长剧更密集，今天上新的剧可能三天后就完结。把 mrds.fun 当作一个固定的入口，比每次重新搜索更省事。页面本身不追求“什么都有”，而是把类型、看点、适合人群讲清楚，让你在几分钟内完成一次挑选决策。</p>
+      </div>
+      <aside class="intro-side">
+        <h3>本页能帮你解决什么</h3>
+        <ul>
+          <li><span>按题材挑剧</span><b>18 类</b></li>
+          <li><span>查看更新进度</span><b>每日</b></li>
+          <li><span>理解短剧套路</span><b>深度解析</b></li>
+          <li><span>看真实观感</span><b>剧迷评论</b></li>
+          <li><span>避坑与入门</span><b>FAQ</b></li>
+          <li><span>追踪行业动态</span><b>短剧资讯</b></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="sec" id="hot" style="background:#eef1f6">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>热播短剧推荐：本周讨论度较高的 8 部</h2>
+      <a class="more" href="/#update">查看全部更新 ›</a>
+    </div>
+    <div class="grid-cards">
+      <article class="dcard">
+        <div class="cover c1"><span>都市逆袭</span></div>
+        <div class="body">
+          <h3>《重返十八岁的董事会》</h3>
+          <div class="tags"><i>逆袭</i><i>商战</i><i>重生</i></div>
+          <p>落魄高管一觉回到创业前夜，用记忆差重排商业棋局，前六集就把对手逼到谈判桌，爽点密度高。</p>
+          <div class="meta"><span>热度 98.6</span><b>更新至 24 集</b></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="cover c2"><span>悬疑反转</span></div>
+        <div class="body">
+          <h3>《第七次敲门》</h3>
+          <div class="tags"><i>悬疑</i><i>反转</i><i>短单元</i></div>
+          <p>同一栋楼里七户人家各藏秘密，每集一个视角，看到第五集才会明白开头那声敲门是谁按的。</p>
+          <div class="meta"><span>热度 96.2</span><b>已完结 30 集</b></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="cover c3"><span>甜宠言情</span></div>
+        <div class="body">
+          <h3>《合约到期前三天》</h3>
+          <div class="tags"><i>甜宠</i><i>契约</i><i>轻喜</i></div>
+          <p>假结婚协议只剩三天，两个人却开始互相试探。台词轻巧，冲突不狗血，适合下饭看。</p>
+          <div class="meta"><span>热度 94.8</span><b>更新至 18 集</b></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="cover c4"><span>古装权谋</span></div>
+        <div class="body">
+          <h3>《长安十二坊》</h3>
+          <div class="tags"><i>古装</i><i>权谋</i><i>群像</i></div>
+          <p>小吏卷入坊市纷争，靠账册和人情破局。服化道在短剧里算讲究，权谋线不靠吼。</p>
+          <div class="meta"><span>热度 92.5</span><b>更新至 21 集</b></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="cover c5"><span>家庭伦理</span></div>
+        <div class="body">
+          <h3>《我妈的第二春》</h3>
+          <div class="tags"><i>家庭</i><i>现实</i><i>温情</i></div>
+          <p>中年再婚议题拍得不悬浮，母女对话写得扎实，节奏偏慢但情绪后劲足，适合陪家人看。</p>
+          <div class="meta"><span>热度 90.1</span><b>已完结 26 集</b></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="cover c6"><span>职场商战</span></div>
+        <div class="body">
+          <h3>《甲方闭嘴》</h3>
+          <div class="tags"><i>职场</i><i>轻喜</i><i>吐槽</i></div>
+          <p>广告公司小组接烂摊子项目，每集一个甲方名场面。台词扎心，做乙方的看了会笑出声。</p>
+          <div class="meta"><span>热度 88.7</span><b>更新至 12 集</b></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="cover c7"><span>校园青春</span></div>
+        <div class="body">
+          <h3>《晚自习之后》</h3>
+          <div class="tags"><i>校园</i><i>青春</i><i>成长</i></div>
+          <p>高三最后一百天的群像短剧，没有强行煽情，重点放在朋友之间的拉扯与和解，看完有点想同学。</p>
+          <div class="meta"><span>热度 86.4</span><b>更新至 16 集</b></div>
+        </div>
+      </article>
+      <article class="dcard">
+        <div class="cover c8"><span>悬疑反转</span></div>
+        <div class="body">
+          <h3>《替身演员》</h3>
+          <div class="tags"><i>悬疑</i><i>身份</i><i>短平快</i></div>
+          <p>剧组替身被卷入一场真实案件，剧里剧外真假难辨。每集结尾钩子都留得比较巧。</p>
+          <div class="meta"><span>热度 85.3</span><b>更新至 20 集</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="sec" id="update">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>最新更新与热播动态（截至 2026 年 11 月 7 日）</h2>
+      <span class="more">按时间倒序</span>
+    </div>
+    <div class="upd-list">
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《重返十八岁的董事会》</h4><p>第 24 集上线，主角第一次在董事会上正面摊牌，评论区讨论集中在“该不该原谅旧搭档”。</p></div><time>11-07</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《合约到期前三天》</h4><p>更新至第 18 集，契约关系出现松动，甜度与误会同时升级，适合连着两集一起看。</p></div><time>11-07</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《长安十二坊》</h4><p>第 21 集放出新人物线，坊市账册成为关键道具，权谋支线开始收束。</p></div><time>11-06</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《替身演员》</h4><p>更新至第 20 集，剧里剧外的身份线正式交叉，结尾留了一个反向钩子。</p></div><time>11-06</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《晚自习之后》</h4><p>第 16 集上线，群像线进入毕业前的冲突段，主角团出现第一次真正分歧。</p></div><time>11-05</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《甲方闭嘴》</h4><p>更新至第 12 集，本集甲方名场面密度最高，适合当轻喜剧单集入门。</p></div><time>11-05</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《第七次敲门》</h4><p>已完结 30 集，结局解释前五集埋下的视角差，二刷体验明显好于首刷。</p></div><time>11-04</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《我妈的第二春》</h4><p>完结 26 集，家庭线收得克制，最后两集情绪浓度较高，建议留出完整时间看。</p></div><time>11-03</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《春分之后》</h4><p>新剧上线，首更 6 集，都市情感向，节奏偏缓，适合喜欢慢热的观众先试两集。</p></div><time>11-03</time></div>
+      <div class="upd"><span class="dot"></span><div class="txt"><h4>《夜班便利店》</h4><p>更新至第 9 集，单元式短故事，每集独立成篇，适合碎片时间随手点开。</p></div><time>11-02</time></div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="sec" id="cats" style="background:#eef1f6">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>按题材找短剧：8 个常用分类入口</h2>
+      <span class="more">按心情选片</span>
+    </div>
+    <div class="cat-grid">
+      <a class="cat" href="/#hot"><div class="ico">逆</div><h3>都市逆袭</h3><p>重生、翻身、商战翻盘，爽点密集，适合通勤路上连刷。</p></a>
+      <a class="cat" href="/#hot"><div class="ico">甜</div><h3>甜宠言情</h3><p>契约、误会、双向奔赴，节奏轻快，下饭解压首选。</p></a>
+      <a class="cat" href="/#hot"><div class="ico">悬</div><h3>悬疑反转</h3><p>多视角、短单元、强钩子，适合喜欢边看边推线索的人。</p></a>
+      <a class="cat" href="/#hot"><div class="ico">古</div><h3>古装权谋</h3><p>坊市、朝堂、群像博弈，服化道与台词是主要看点。</p></a>
+      <a class="cat" href="/#hot"><div class="ico">家</div><h3>家庭伦理</h3><p>代际关系、再婚与养老议题，情绪真实，适合陪家人看。</p></a>
+      <a class="cat" href="/#hot"><div class="ico">职</div><h3>职场商战</h3><p>甲方乙方、项目攻防、办公室群像，吐槽感强。</p></a>
+      <a class="cat" href="/#hot"><div class="ico">校</div><h3>校园青春</h3><p>毕业季、友情与成长，情绪细腻，适合怀旧向观众。</p></a>
+      <a class="cat" href="/#hot"><div class="ico">单</div><h3>单元短篇</h3><p>每集独立故事，随时切入不迷路，碎片时间友好。</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="sec" id="deep">
+  <div class="wrap">
+    <div class="deep">
+      <h2>深度解析：为什么大家会持续搜索 mrds.fun 这类短剧聚合入口</h2>
+      <p>短剧的消费逻辑和长剧差别很大。长剧靠设定与铺垫留住人，短剧更依赖<strong>前三十秒的钩子</strong>。一集往往只有三到十分钟，剧情要在极短时间里完成“抛问题—给刺激—留悬念”三步，所以观众挑选时的判断标准也更直接：题材对不对味、开头够不够抓人、更新节奏是否能跟上。mrds.fun 这类聚合页的价值，恰恰在于把这三件事压缩成可以快速扫读的信息。</p>
+      <h3>题材套路是短剧的第一层筛选器</h3>
+      <p>都市逆袭看的是翻身过程里的情绪释放，观众代入的是“被低估之后反转”的爽感；甜宠言情看的是关系推进中的试探与确认，重点在台词和氛围；悬疑反转看的是信息差的调度，每集结尾的钩子必须比上一集更狠；古装权谋则更依赖人物关系密度，哪怕篇幅短，也要让观众记住谁和谁站在一起。把这些类型分开讲清楚，比把所有剧混在一张表里更有参考价值。</p>
+      <h3>节奏与集数决定追剧成本</h3>
+      <p>短剧常见的形态是几十集到上百集不等，单集时长短，但总时长并不一定少。对观众来说，判断一部剧值不值得追，除了看点，还要看<strong>更新状态</strong>：已完结的可以一次看完，更新中的要接受断点，单元式的可以随看随停。本页在推荐卡片和更新列表里都标注了进度，就是为了减少“点进去才发现还没更完”的挫败感。</p>
+      <h3>人物与表现力同样影响留存</h3>
+      <p>短剧预算有限，但并不意味着表现力一定弱。很多口碑不错的作品，靠的是演员在有限镜头里的情绪准确度，以及剪辑对节奏的控制。比如悬疑类会用重复镜头制造视角差，甜宠类会用停顿和眼神完成情绪传递。观众在评论区讨论最多的往往不是大场面，而是某一句台词、某一个眼神，这也说明短剧的竞争力更集中在细节上。</p>
+      <blockquote>搜索“mrds.fun”的人，多数并不是想找某一部具体的剧，而是想找一个稳定的入口：今天有什么新剧、哪部值得先看、更新到哪一集。这个页面就是按这个顺序组织的。</blockquote>
+      <h3>适合人群与同类内容比较</h3>
+      <p>如果你习惯用整块时间看剧，短剧可能会显得节奏过密；但如果你只有通勤、午休、睡前的碎片时间，短剧的单元化结构反而更友好。和长视频平台的剧集相比，短剧在制作规格上不占优势，但在“快速进入情绪”这件事上效率更高。和纯信息流推荐相比，聚合页的优势是<strong>可比较</strong>：同一屏里能看到不同类型、不同进度、不同看点的剧，挑选更主动。</p>
+      <p>读者搜索这个词，通常想了解的无非几件事：有哪些值得看的短剧、去哪里看更新、不同类型怎么选、哪部适合自己。把这些问题的答案放在同一页里，并且保持更新，才是这个页面长期有价值的原因。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 体验指南 -->
+<section class="sec" id="exp">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>使用与追剧体验指南</h2>
+      <span class="more">从浏览到收藏</span>
+    </div>
+    <div class="exp-grid">
+      <div class="exp"><div class="num">01</div><h3>先看结构再看内容</h3><p>页面按热播、更新、分类、解析分层，先扫标题和标签，几分钟就能锁定两三个候选。</p></div>
+      <div class="exp"><div class="num">02</div><h3>用标签快速筛选</h3><p>题材标签、更新状态、热度值并列展示，适合按心情而不是按剧名来找剧。</p></div>
+      <div class="exp"><div class="num">03</div><h3>移动端阅读友好</h3><p>卡片在手机上自动单列排布，文字不挤，通勤路上单手滑动也能看完一屏。</p></div>
+      <div class="exp"><div class="num">04</div><h3>适合追更与收藏</h3><p>更新列表按日期排列，已完结与更新中分开标注，方便判断是否适合一次看完。</p></div>
+      <div class="exp"><div class="num">05</div><h3>推荐能扩展浏览路径</h3><p>从一部剧的类型标签可以延伸到同类作品，不用重新搜索就能发现相近题材。</p></div>
+      <div class="exp"><div class="num">06</div><h3>评论区补充主观观感</h3><p>数据和标签解决“是什么”，评论解决“好不好看”，两者结合更接近真实决策。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="background:#eef1f6">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>常见问题：关于短剧挑选与追更</h2>
+      <span class="more">6 个高频疑问</span>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item"><h3>mrds.fun 主要收录哪类短剧？</h3><p>以都市逆袭、甜宠言情、悬疑反转、古装权谋、家庭伦理、职场商战和校园青春为主，也会收录单元式短篇。页面按题材和更新状态归类，方便按类型找剧，而不是只按剧名搜索。</p></div>
+      <div class="faq-item"><h3>第一次看短剧，建议从哪种类型入手？</h3><p>如果只是想感受节奏，可以先看单元式短篇或轻喜剧，每集独立成篇，不用记复杂人物关系。如果更看重情绪释放，都市逆袭类的开头钩子通常更直接，两三集就能判断是否合口味。</p></div>
+      <div class="faq-item"><h3>更新中的剧和已完结的剧怎么选？</h3><p>时间碎片、想随时停下的，选单元式或已完结作品；愿意跟着节奏追的，可以选更新中的剧，但要接受断点。本页更新列表标注了进度和日期，点开前先看一眼能少走弯路。</p></div>
+      <div class="faq-item"><h3>短剧一集多长，适合什么场景看？</h3><p>常见单集在三到十分钟之间，适合通勤、午休、睡前这类碎片场景。如果是悬疑类，建议留出连续两到三集的时间，因为钩子往往跨集承接，断开看体验会打折。</p></div>
+      <div class="faq-item"><h3>怎么判断一部短剧值不值得追？</h3><p>先看题材标签是否对味，再看更新状态和热度，最后看评论区的具体观感。短剧试错成本低，通常看前三集就能判断节奏和表演是否合你口味，不必勉强看完。</p></div>
+      <div class="faq-item"><h3>页面里的热度和评分是真实数据吗？</h3><p>热度值用于横向比较站内讨论度，属于聚合参考指标，不等同于平台播放量。它更适合用来判断“最近大家在聊什么”，具体好不好看仍建议结合评论和自身偏好。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section class="sec" id="cmt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>剧迷评论：近 30 天真实观感摘录</h2>
+      <span class="more">共 16 条</span>
+    </div>
+    <div class="cmt-list">
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ff6b6b">林</span><span class="name">林间小满</span><time>11-07</time></div><p>《重返十八岁的董事会》前六集是真的爽，开会那段反复看了两遍，后面节奏稍微稳了一点但还能追。</p><div class="like">👍 32 · 回复 6</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#5f7cff">阿</span><span class="name">阿柚不加冰</span><time>11-07</time></div><p>《合约到期前三天》台词写得轻，不尬，适合吃饭的时候看。就是误会桥段有点老，但不影响。</p><div class="like">👍 27 · 回复 4</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4ecdc4">南</span><span class="name">南风慢递</span><time>11-06</time></div><p>《第七次敲门》二刷了，第一遍没注意开头的视角问题，第二遍才发现导演埋得很细，值得。</p><div class="like">👍 41 · 回复 9</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#f7b733">小</span><span class="name">小满不慌</span><time>11-06</time></div><p>古装那部服化道在短剧里算用心了，就是权谋线有点密，我一边看一边记人名，累但好看。</p><div class="like">👍 19 · 回复 3</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#b06ab3">夜</span><span class="name">夜班观察员</span><time>11-05</time></div><p>《夜班便利店》这种单元式太适合我了，地铁上十分钟一集，不用记剧情，随时能停。</p><div class="like">👍 23 · 回复 2</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#43a6f5">程</span><span class="name">程一页</span><time>11-05</time></div><p>《我妈的第二春》后半段有点拖，但母女吵架那场戏是真不错，演员情绪很稳。</p><div class="like">👍 16 · 回复 5</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ff8a8a">七</span><span class="name">七号放映厅</span><time>11-04</time></div><p>《替身演员》的钩子留得挺巧，就是有几集明显在拖时长，建议开 1.25 倍速看。</p><div class="like">👍 14 · 回复 3</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#2a3ba0">周</span><span class="name">周末不加班</span><time>11-04</time></div><p>《甲方闭嘴》太真实了，做乙方的看每一集都想截图发群，笑完有点心酸。</p><div class="like">👍 38 · 回复 7</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#e07b00">许</span><span class="name">许愿池的鱼</span><time>11-03</time></div><p>《晚自习之后》没有硬煽情这点加分，朋友之间那种拧巴写得很像真的。</p><div class="like">👍 21 · 回复 2</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#16796f">顾</span><span class="name">顾里看剧</span><time>11-03</time></div><p>《春分之后》节奏偏慢，第一集差点弃了，看到第三集才进状态，喜欢慢热的可以试试。</p><div class="like">👍 11 · 回复 4</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#c0392b">唐</span><span class="name">糖炒栗子</span><time>11-02</time></div><p>想吐槽一下，有些短剧标题起得太夸张，点进去内容根本撑不住，还是得看评论再决定。</p><div class="like">👍 25 · 回复 8</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4a2a72">白</span><span class="name">白桃气泡</span><time>11-02</time></div><p>希望这个页面能加个“已完结”筛选，我一般不想追更，想一次看完，现在得自己一条条看。</p><div class="like">👍 18 · 回复 3</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#1a4f8f">沈</span><span class="name">沈默是金</span><time>11-01</time></div><p>《长安十二坊》的群像做得不错，就是人物太多，前几集容易脸盲，建议慢慢看。</p><div class="like">👍 13 · 回复 2</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#c26b00">温</span><span class="name">温水煮剧</span><time>10-31</time></div><p>短剧看多了会发现套路都差不多，但偶尔也能碰到台词写得好的，就当淘片了。</p><div class="like">👍 20 · 回复 6</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#b3295a">何</span><span class="name">何必较真</span><time>10-30</time></div><p>更新列表按日期排这点好评，比以前在小程序里翻半天强多了。</p><div class="like">👍 17 · 回复 1</div></div>
+      <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#2a3ba0">江</span><span class="name">江边散步</span><time>10-29</time></div><p>《第七次敲门》结局有点仓促，但整体在线，属于看完会想找人讨论的那类。</p><div class="like">👍 22 · 回复 5</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="sec" id="news" style="background:#eef1f6">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>短剧资讯与行业动态</h2>
+      <span class="more">每日更新</span>
+    </div>
+    <div class="news-grid">
+      <article class="news"><div class="date">2026-11-07</div><h3>微短剧十一月上新观察：都市与悬疑仍是主力</h3><p>本月上新的短剧中，都市逆袭与悬疑反转占比明显提升，单元式短篇也在增加，碎片化消费趋势更清晰。</p></article>
+      <article class="news"><div class="date">2026-11-06</div><h3>《第七次敲门》完结后讨论度回升，多视角叙事受关注</h3><p>该剧完结后二刷讨论增多，观众更关注前几集埋下的视角差，说明短剧也在尝试更复杂的叙事结构。</p></article>
+      <article class="news"><div class="date">2026-11-05</div><h3>轻喜剧类短剧集数走低，单集时长趋于稳定</h3><p>近期轻喜剧作品更倾向控制在二十集上下，单集时长稳定在五到八分钟，节奏更接近下饭场景。</p></article>
+      <article class="news"><div class="date">2026-11-04</div><h3>古装短剧服化道投入上升，群像线成新看点</h3><p>部分古装短剧开始在服化道和群像关系上增加投入，虽然篇幅有限，但人物密度明显提升。</p></article>
+      <article class="news"><div class="date">2026-11-03</div><h3>《春分之后》上线，慢热情感线尝试拉长叙事</h3><p>新剧首更六集，节奏偏缓，主打情感铺陈，属于短剧中较少见的慢热类型，适合耐心型观众。</p></article>
+      <article class="news"><div class="date">2026-11-02</div><h3>短剧评论生态变化：观众更看重台词与表演</h3><p>从近期评论看，观众讨论重点从“爽不爽”逐渐转向台词质量和演员表现，评价维度更细化。</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="sec" id="sub">
+  <div class="wrap">
+    <div class="subscribe">
+      <div>
+        <h2>每天上新，第一时间知道</h2>
+        <p>留下邮箱，接收 mrds.fun 的短剧更新提醒与每周精选推荐。</p>
+      </div>
+      <form class="box" onsubmit="return false">
+        <input type="email" placeholder="请输入邮箱地址">
+        <button type="button">订阅更新</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer" id="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo" style="color:#fff"><span class="mark">M</span>mrds.fun</div>
+        <p>每日短剧聚合与更新追踪页面，围绕微短剧推荐、题材分类与观感讨论组织内容，帮助剧迷更高效地挑剧、追更与回顾。</p>
+      </div>
+      <div>
+        <h4>内容入口</h4>
+        <a href="/#hot">热播推荐</a>
+        <a href="/#update">更新追踪</a>
+        <a href="/#cats">题材分类</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div>
+        <h4>帮助与反馈</h4>
+        <a href="/#faq">常见问题</a>
+        <a href="/#cmt">剧迷评论</a>
+        <a href="/#news">短剧资讯</a>
+        <a href="/#sub">订阅更新</a>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <a href="/#home">短剧首页</a>
+        <a href="/#cats">类型索引</a>
+        <a href="/#exp">追剧指南</a>
+        <a href="/#deep">题材观察</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 mrds.fun 每日短剧内容聚合页 · 本站信息为整理与推荐参考，不提供视频存储服务。</span>
+      <span>免责声明：页面内容仅用于内容索引与观感交流，相关作品版权归原权利方所有。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+                                              </html>
